@@ -1,9 +1,15 @@
 #!/bin/bash
 #This script is executed every time your instance is spawned.
 
+# Clone the planq repo and get user_init up to date
 cd
 cd my_data
 rm -rf planq
 git clone https://github.com/tihomir-kit/planq
-cd planq
-cp user_init ../user_init
+cp ./planq/user_init ./user_init # Ensure we have the latest version of user_init
+
+# Backup the original PwnBox .bashrc and then run planq install_bashrc.sh which will
+# merge the original .bashrc with the planq .bashrc. This is to prevent losing the
+# original PwnBox .bashrc contents if install_bashrc.sh is run multiple times.
+cp ~/.bashrc ~/my_data/.bashrc.bak
+./my_data/planq/install_bashrc.sh
