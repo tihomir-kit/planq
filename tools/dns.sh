@@ -1,6 +1,6 @@
 # Add a host to /etc/hosts
 function madns_f {
-  sed -i "/$1/d" /etc/hosts; # Remove any existing entries so we don't have duplicates
+  sudo sed -i "/$1/d" /etc/hosts; # Remove any existing entries so we don't have duplicates
   echo "$1 $2" | sudo tee -a /etc/hosts;
 }
 alias madns=madns_f
