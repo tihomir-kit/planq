@@ -1,5 +1,5 @@
-alias reinit='~/my_data/user_init'
 alias rebash='. ~/.bashrc'
+alias reinit='~/my_data/user_init; rebash'
 
 tls=~/my_data/planq/tools
 

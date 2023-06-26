@@ -14,6 +14,3 @@ if ! grep -q "planq" ~/.bashrc; then
   echo "# Planq additions to .bashrc" >> ~/.bashrc
   echo "source ~/my_data/planq/.bashrc" >> ~/.bashrc
 fi
-
-# Reload .bashrc
-. ~/.bashrc
