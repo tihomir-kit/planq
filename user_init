@@ -1,0 +1,5 @@
+#!/bin/bash
+#This script is executed every time your instance is spawned.
+
+cd
+git clone https://github.com/tihomir-kit/planq
