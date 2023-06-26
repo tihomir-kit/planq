@@ -3,5 +3,11 @@ function madns_f { echo "$1 $2" | sudo tee -a /etc/hosts; }
 alias madns=madns_f
 
 # Add "trgt" host IP to /etc/hosts
-function trgt_f { echo "$1 trgt" | sudo tee -a /etc/hosts; }
+function trgt_f {
+  echo "$1 trgt" | sudo tee -a /etc/hosts;
+
+  if [ -n "$2" ]; then
+    madns_f $1 $2
+  fi
+}
 alias trgt=trgt_f
