@@ -3,5 +3,5 @@
 Initial install
 
 ```sh
-curl -s https://github.com/tihomir-kit/planq/user_init | bash /dev/stdin
+curl -s https://raw.githubusercontent.com/tihomir-kit/planq/main/user_init > user_init; ./user_init
 ```

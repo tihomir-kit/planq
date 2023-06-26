@@ -2,4 +2,5 @@
 #This script is executed every time your instance is spawned.
 
 cd
+rmdir planq
 git clone https://github.com/tihomir-kit/planq
