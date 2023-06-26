@@ -12,4 +12,5 @@ cp ./planq/user_init ./user_init # Ensure we have the latest version of user_ini
 # merge the original .bashrc with the planq .bashrc. This is to prevent losing the
 # original PwnBox .bashrc contents if install_bashrc.sh is run multiple times.
 cp ~/.bashrc ~/my_data/.bashrc.bak
-./my_data/planq/install_bashrc.sh
+chmod +x ~/my_data/planq/install_bashrc.sh
+~/my_data/planq/install_bashrc.sh
