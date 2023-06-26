@@ -1,13 +1,16 @@
 # Add a host to /etc/hosts
-function madns_f { echo "$1 $2" | sudo tee -a /etc/hosts; }
+function madns_f {
+  sed -i "/$1/d" /etc/hosts; # Remove any existing entries so we don't have duplicates
+  echo "$1 $2" | sudo tee -a /etc/hosts;
+}
 alias madns=madns_f
 
 # Add "trgt" host IP to /etc/hosts
-function trgt_f {
+function trgtdns_f {
   madns_f $1 trgt
 
   if [ -n "$2" ]; then
     madns_f $1 $2
   fi
 }
-alias trgt=trgt_f
+alias trgtdns=trgt_f
