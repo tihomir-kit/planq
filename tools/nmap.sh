@@ -1,12 +1,11 @@
-# Add a host to /etc/hosts
-function nmaprecon { nmap -sV -sC --min-rate 5000 $1; }
-export -f nmaprecon
+function nmaprecon_f { nmap -sV -sC --min-rate 5000 $1; }
+alias nmaprecon=nmaprecon_f
 
-function trgtrecon { nmap -sV -sC --min-rate 5000 trgt; }
-export -f trgtrecon
+function trgtrecon_f { nmap -sV -sC --min-rate 5000 trgt; }
+alias trgtrecon=trgtrecon_f
 
-function nmapallports { nmap -p- $1; }
-export -f nmapallports
+function nmapallports_f { nmap -p- $1; }
+alias nmapallports=nmapallports_f
 
-function trgtallports { nmap -p- trgt; }
-export -f trgtallports
+function trgtallports_f { nmap -p- trgt; }
+alias trgtallports=trgtallports_f
