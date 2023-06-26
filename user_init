@@ -8,9 +8,12 @@ rm -rf planq
 git clone https://github.com/tihomir-kit/planq
 cp ./planq/user_init ./user_init # Ensure we have the latest version of user_init
 
-# Backup the original PwnBox .bashrc and then run planq install_bashrc.sh which will
-# merge the original .bashrc with the planq .bashrc. This is to prevent losing the
-# original PwnBox .bashrc contents if install_bashrc.sh is run multiple times.
-cp ~/.bashrc ~/my_data/.bashrc.bak
-chmod +x ~/my_data/planq/install_bashrc.sh
-~/my_data/planq/install_bashrc.sh
+# Append planq .bashrc to .bashrc if it's not already there
+if ! grep -q "planq" ~/.bashrc; then
+  echo "" >> ~/.bashrc
+  echo "# Planq additions to .bashrc" >> ~/.bashrc
+  echo "source ~/my_data/planq/.bashrc" >> ~/.bashrc
+fi
+
+# Reload .bashrc
+. ~/.bashrc
