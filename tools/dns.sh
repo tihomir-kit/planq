@@ -13,4 +13,4 @@ function trgtdns_f {
     madns_f $1 $2
   fi
 }
-alias trgtdns=trgt_f
+alias trgtdns=trgtdns_f
