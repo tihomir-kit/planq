@@ -1,4 +1,3 @@
-alias alias='alias -p'
 alias rebash='. ~/.bashrc'
 alias reinit='~/my_data/user_init; rebash'
 
