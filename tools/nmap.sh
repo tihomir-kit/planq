@@ -8,6 +8,6 @@ function nmaprecon_f { nmap -sV -sC -T4 $1; }
 alias nmaprecon=nmaprecon_f
 alias trgtrecon='nmaprecon_f trgt'
 
-function nmapallports_f { nmap -p- $1; }
+function nmapallports_f { nmap -p- -T4 $1; }
 alias nmapallports=nmapallports_f
 alias trgtallports='trgtallports_f trgt'

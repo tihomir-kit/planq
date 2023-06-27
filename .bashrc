@@ -1,7 +1,9 @@
 alias rebash='. ~/.bashrc'
 alias reinit='~/my_data/user_init; rebash'
 
-tls=~/my_data/planq/tools
-
-source $tls/dns.sh
-source $tls/nmap.sh
+for file in ~/my_data/planq/tools/*
+do
+  if [[ -f $file ]]; then
+    source $file
+  fi
+done
