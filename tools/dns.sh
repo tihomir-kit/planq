@@ -1,4 +1,6 @@
 function madns_f {
+  # TODO: If $1 or $2 is empty, show warning instead
+
   sudo sed -i "/$2/d" /etc/hosts; # Remove any existing entries so we don't have colliding duplicates
   echo "$1 $2" | sudo tee -a /etc/hosts;
 }
