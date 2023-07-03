@@ -4,12 +4,12 @@ function bustpages_f {
 # $1 = url
 alias bustpages=bustpages_f
 
-function bustpageextensions_f {
+function bustextensions_f {
   bustpages -u $1 -x $2
 }
 # $1 = url
 # $2 = file extensions (comma-separated)
-alias bustpageextensions=bustpageextensions_f
+alias bustextensions=bustextensions_f
 
 function bustsubdomains_f {
   gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u $1
