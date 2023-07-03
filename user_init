@@ -16,7 +16,9 @@ if ! grep -q "planq" ~/.bashrc; then
 fi
 
 # Install software
-go install github.com/hakluke/hakrawler@latest
+go install -v \
+  github.com/hakluke/hakrawler@latest \
+  github.com/projectdiscovery/httpx/cmd/httpx@latest
 
-sudo apt install -y \
-  httpx
+# sudo apt install -y \
+#   httpx
