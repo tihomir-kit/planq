@@ -19,5 +19,4 @@ fi
 go install github.com/hakluke/hakrawler@latest
 
 sudo apt install -y \
-  httpx \
-  /
+  httpx
