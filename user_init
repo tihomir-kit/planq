@@ -16,7 +16,8 @@ if ! grep -q "planq" ~/.bashrc; then
 fi
 
 # Install software
+go install github.com/hakluke/hakrawler@latest
+
 sudo apt install -y \
-  hakrawler \
   httpx \
   /

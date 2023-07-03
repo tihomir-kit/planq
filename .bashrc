@@ -7,3 +7,5 @@ do
     source $file
   fi
 done
+
+alias hakrawler=~/go/bin/hakrawler
