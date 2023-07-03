@@ -7,3 +7,5 @@ do
     source $file
   fi
 done
+
+export PATH=$PATH:~/go/bin # Append /go/bin to PATH
