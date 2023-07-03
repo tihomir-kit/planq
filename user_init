@@ -18,7 +18,10 @@ fi
 # Install software
 go install -v \
   github.com/hakluke/hakrawler@latest \
-  github.com/projectdiscovery/httpx/cmd/httpx@latest
+  github.com/projectdiscovery/httpx/cmd/httpx@latest \
+  /
+
+export PATH=$PATH:~/go/bin # Append /go/bin to PATH
 
 # sudo apt install -y \
 #   httpx
