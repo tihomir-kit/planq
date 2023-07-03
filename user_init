@@ -15,13 +15,12 @@ if ! grep -q "planq" ~/.bashrc; then
   echo "source ~/my_data/planq/.bashrc" >> ~/.bashrc
 fi
 
-# Install software
-go install -v \
-  github.com/hakluke/hakrawler@latest \
-  github.com/projectdiscovery/httpx/cmd/httpx@latest \
-  /
+# Install GO tools (line-by-line required becuase of some GO Install restrictions)
+go install -v github.com/hakluke/hakrawler@latest
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
 export PATH=$PATH:~/go/bin # Append /go/bin to PATH
 
+# Install other tools
 # sudo apt install -y \
 #   httpx
