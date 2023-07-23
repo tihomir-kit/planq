@@ -1,6 +1,7 @@
 function downprep_f {
   if [ -d "tools" ]; then
-      return
+    # If tools folder already exists, assume this has already been done, don't do it again
+    return
   fi
 
   mkdir tools
