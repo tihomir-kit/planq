@@ -12,3 +12,5 @@ export PATH=$PATH:~/go/bin # Append /go/bin to PATH
 
 alias pyserve='python3 -m http.server 8080'
 alias revshell='nc -nlvp 1337'
+
+downprep &

@@ -29,3 +29,6 @@ fi
 #   httpx \
 #   sqlitebrowser \
 #   git-dumper
+
+source ./planq/scripts/downloads.sh
+downprep &
