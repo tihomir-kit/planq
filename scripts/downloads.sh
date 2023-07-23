@@ -1,4 +1,8 @@
 function downprep_f {
+  if [ -d "tools" ]; then
+      return
+  fi
+
   mkdir tools
   cd tools
   wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64
