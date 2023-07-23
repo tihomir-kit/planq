@@ -12,6 +12,7 @@ function trgtdns_f {
 
   if [ -n "$2" ]; then
     madns_f $1 $2
+    madns_f $1 $2.htb
   fi
 }
 # Add "trgt" host IP to /etc/hosts
