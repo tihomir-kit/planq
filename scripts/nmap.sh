@@ -11,3 +11,5 @@ alias trgtrecon='nmaprecon_f trgt'
 function nmapallports_f { nmap -p- -T4 $1; }
 alias nmapallports=nmapallports_f
 alias trgtallports='nmapallports_f trgt'
+
+# TODO: Add silent option

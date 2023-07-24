@@ -14,18 +14,3 @@ if ! grep -q "planq" ~/.bashrc; then
   echo "# Planq additions to .bashrc" >> ~/.bashrc
   echo "source ~/my_data/planq/.bashrc" >> ~/.bashrc
 fi
-
-# Install GO tools (line-by-line required becuase of some GO Install restrictions)
-# echo "Installing GO tools..."
-# go install -v github.com/hakluke/hakrawler@latest
-# go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-# go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-# go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-# go install -v github.com/projectdiscovery/katana/cmd/katana@latest
-# go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
-
-# Install other tools
-# sudo apt install -y \
-#   httpx \
-#   sqlitebrowser \
-#   git-dumper
