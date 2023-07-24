@@ -1,11 +1,12 @@
 function instools_f {
   sudo apt install -y \
-    httpx \
     xrdp \
-    git-dumper \
     sqlitebrowser \
     mongodb-database-tools \
-    redis-cli
+    pwncat
+
+  # Install Python tools
+  pip3 install git-dumper
 
   # Install GO tools (line-by-line required becuase of some GO Install restrictions)
   go install -v github.com/hakluke/hakrawler@latest
