@@ -10,7 +10,7 @@ done
 
 export PATH=$PATH:~/go/bin # Append /go/bin to PATH
 
-alias pyserve='python3 -m http.server 8080'
+alias pyserve='python3 -m http.server 8081' # 8081 because burp is on 8080
 alias revshell='nc -nlvp 1337'
 
 # Auto-download and prepare a bunch of tools in the tools folder
