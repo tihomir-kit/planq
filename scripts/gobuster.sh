@@ -1,5 +1,5 @@
 function bustpages_f {
-  gobuster dir -w /usr/share/dirb/wordlists/common.txt -u $1
+  gobuster dir -w /usr/share/dirb/wordlists/common.txt -u $1 -k
 }
 # $1 = url
 alias bustpages=bustpages_f
@@ -12,7 +12,7 @@ function bustextensions_f {
 alias bustextensions=bustextensions_f
 
 function bustsubdomains_f {
-  gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u $1
+  gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u $1 -k
 }
 # $1 = url
 alias bustsubdomains=bustsubdomains_f
