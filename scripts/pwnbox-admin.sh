@@ -4,7 +4,7 @@ function px-init_f {
   sudo apt install -y \
     fzf
 }
-alias px-init=pbxinit_f # Customize the system a little
+alias px-init=px-init_f # Customize the system a little
 
 
 
