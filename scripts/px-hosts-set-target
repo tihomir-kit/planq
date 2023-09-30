@@ -1,9 +1,9 @@
 #!/bin/bash
 # Add "trgt" host IP to /etc/hosts
 
-px-hosts-add_f $1 trgt
+px-hosts-add $1 trgt
 
 if [ -n "$2" ]; then
-  px-hosts-add_f $1 $2
-  px-hosts-add_f $1 $2.htb
+  px-hosts-add $1 $2
+  px-hosts-add $1 $2.htb
 fi
