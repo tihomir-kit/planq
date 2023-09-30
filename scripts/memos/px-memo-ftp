@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "
+# Login anonymously - use "anonymous" as username
+ftp <host>
+
+# Login with credentials (actual hostname must be set - IP won't work??)
+ftp ftp://username:password@host
+
+# Another way is to use
+ftp -nv <host>
+# Immediately followed by
+user <user>
+
+# List files (requires to be connected - sometimes the anonymous user is enough)
+ls
+
+# Download a file from FTP
+get <file>
+"

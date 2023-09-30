@@ -1,0 +1,5 @@
+#!/bin/bash
+# List number of SMB shares (just press enter when prompetd for password, and see if you get anything or use -N (--no-pass))
+
+# $1 - <target>
+smbclient -L $1 -N

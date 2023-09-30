@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "
+cat << EOF > somefile.sh
+# Some content
+EOF
+"

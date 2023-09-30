@@ -1,0 +1,5 @@
+#!/bin/bash
+# Find which port a service is running under (does not require actually open ports)
+
+# $1 - <port>
+ps aux | grep $port

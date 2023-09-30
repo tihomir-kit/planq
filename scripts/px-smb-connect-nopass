@@ -1,0 +1,6 @@
+#!/bin/bash
+# Connect to a share without password
+
+# $1 - <target>
+# $2 - <share>
+smbclient -N //$1/$2

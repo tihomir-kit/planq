@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo "
+# Map and enumerate
+nmap -sV <target>
+
+# Scan all ports
+# This can be really slow, so consider adding
+# '--min-rate 5000' or '-T5' to speed it up.
+nmap -p- <target>
+
+# Run this as initial scan?
+# -sC -> default scripts
+# -sV -> attempt to determine version
+# -oA -> output to 3 formats (normal / xml / grepable)
+nmap -sC -sV -oA result <target>
+
+# Scan specific port
+nmap -sC -sV -T5 -p <port> -A <host>
+
+# If scan is rejecting probes, try -Pn
+nmap <other_options> -Pn
+
+# Scan UDP ports (requires root)
+sudo nmap -sU <target>
+
+# Increase verbosity with -vvv
+nmap -sV -vvv <target>
+
+# When we're seemingly unable to find a port
+nmap -Pn -p- -T4 <target>
+"

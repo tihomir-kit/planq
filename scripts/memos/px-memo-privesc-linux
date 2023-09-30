@@ -1,0 +1,38 @@
+#!/bin/bash
+
+echo "
+# -l List allowed and forbidden commands for the invoking user
+sudo -l
+
+# Run id to check if there are any user groups
+id
+
+# Next try to find any binaries within the group
+find / -group <group> 2>/dev/null
+
+# Check privileges and type file
+ls -la <file> && file <file>
+
+# Search for SUID
+find / -perm -u=s -type f 2>/dev/null
+
+# Search for user
+find / -user <user> 2> /dev/null
+
+# Try to find some passwords
+cat /etc/passwd
+
+# Try to find some hosts
+cat /etc/hosts
+
+# Try to find passwords in current directory, ignore casing
+cat * | grep -i passw*
+
+# Examine open ports
+netstat -tlpn
+
+ifconfig
+whoami
+ps aux
+find / -perm /4000 2>/dev/null
+"

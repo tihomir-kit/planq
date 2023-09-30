@@ -12,9 +12,10 @@ export PATH=$PATH:~/my_data/planq/scripts:~/go/bin:~/.fzf/bin
 
 alias rebash='. ~/.bashrc'
 alias reinit='~/my_data/user_init; rebash'
-alias px-pyserve='python3 -m http.server 8081' # 8081 because burp is on 8080
-alias px-revshell='nc -nlvp 1337'
-alias px-hosts='sudo vim /etc/hosts'
+alias pyserve='px-pyserve'
+alias revshell='px-revshell'
+alias hostes='px-hosts'
+alias hostrgt='px-hosts-add'
 
 # Auto-download and prepare a bunch of tools in the tools folder
 px-download-bin-tools > /dev/null 2>&1 &

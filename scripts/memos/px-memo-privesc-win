@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "
+# Check these locations
+C:/ <----- (check for anything out of the ordinary)
+C:/users/<user>/desktop
+C:/users/<user>/downloads
+C:/users/<user>/.ssh
+C:/users/<user>/.ssh/id_rsa
+C:/windows/win.ini
+
+# Try these commands
+whoami /priv
+icacls <script> ???
+"

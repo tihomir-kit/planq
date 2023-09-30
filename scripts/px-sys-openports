@@ -1,0 +1,5 @@
+#!/bin/bash
+# Examine open ports (and currently in use)
+
+# $1 - <port/service_name>
+netstat -tuln | grep $1

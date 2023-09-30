@@ -19,9 +19,23 @@ for file in ~/my_data/planq/scripts/*;
 do
   if [[ -f $file ]]; then
     chmod +x $file
-    source $file
   fi
 done
 
 # Set up gnome-keyring-daemon so we don't get prompted to set a password during apt installations
 echo -n "htb-tkit" | gnome-keyring-daemon --unlock
+
+# Set default file types to be opened by VS Code (codium) by default
+xdg-mime default codium.desktop application/octet-stream # files with no extension
+xdg-mime default codium.desktop text/plain
+xdg-mime default codium.desktop application/x-shellscript
+xdg-mime default codium.desktop text/x-csharp
+xdg-mime default codium.desktop text/x-c
+xdg-mime default codium.desktop text/x-python
+xdg-mime default codium.desktop application/javascript
+xdg-mime default codium.desktop text/typescript
+xdg-mime default codium.desktop text/html
+xdg-mime default codium.desktop text/css
+xdg-mime default codium.desktop application/x-ruby
+xdg-mime default codium.desktop application/x-perl
+xdg-mime default codium.desktop application/x-php

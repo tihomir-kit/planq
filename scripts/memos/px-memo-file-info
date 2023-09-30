@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "
+file <file> # File meta info
+strings <file> # Extract strings from file
+identify <file> # Type of encoding (usually useful for jtr)
+ltrace <file>
+"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alias px-revshell='nc -nlvp 1337'

