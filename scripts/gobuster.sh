@@ -1,18 +1,18 @@
-function bustpages_f {
+function px-gobuster-pages_f {
   gobuster dir -w /usr/share/dirb/wordlists/common.txt -u $1 -k
 }
 # $1 = url
-alias bustpages=bustpages_f
+alias px-gobuster-pages=px-gobuster-pages_f
 
 function bustextensions_f {
-  bustpages -u $1 -x $2
+  px-gobuster-pages -u $1 -x $2
 }
 # $1 = url
 # $2 = file extensions (comma-separated)
 alias bustextensions=bustextensions_f
 
-function bustsubdomains_f {
+function px-gobuster-domains_f {
   gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u $1 -k
 }
 # $1 = url
-alias bustsubdomains=bustsubdomains_f
+alias px-gobuster-domains=px-gobuster-domains_f

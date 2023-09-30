@@ -4,12 +4,10 @@
 # T4 often used during CTF's
 # T5 possible packet loss and can compromise accuracy of the scan results
 
-function nmaprecon_f { nmap -sV -sC -T4 $1; }
-alias nmaprecon=nmaprecon_f
-alias trgtrecon='nmaprecon_f trgt'
+function px-nmap-recon_f { nmap -sV -sC -T4 $1; }
+alias px-nmap-recon=px-nmap-recon_f
 
-function nmapallports_f { nmap -p- -T4 $1; }
-alias nmapallports=nmapallports_f
-alias trgtallports='nmapallports_f trgt'
+function px-nmap-all-ports_f { nmap -p- -T4 $1; }
+alias px-nmap-all-ports=px-nmap-all-ports_f
 
 # TODO: Add silent option

@@ -14,3 +14,6 @@ if ! grep -q "planq" ~/.bashrc; then
   echo "# Planq additions to .bashrc" >> ~/.bashrc
   echo "source ~/my_data/planq/.bashrc" >> ~/.bashrc
 fi
+
+# Set up gnome-keyring-daemon so we don't get prompted to set a password during apt installations
+echo -n "htb-tkit" | gnome-keyring-daemon --unlock
