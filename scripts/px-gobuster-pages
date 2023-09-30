@@ -1,0 +1,4 @@
+#!/bin/bash
+# $1 = url
+
+gobuster dir -w /usr/share/dirb/wordlists/common.txt -u $1 -k

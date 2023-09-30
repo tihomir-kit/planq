@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# SEE: https://medium.com/@Aircon/nmap-basic-port-scans-tryhackme-thm-c7c3361831f0 (for performance tuning)
+# T0 and T1 to avoid IDS alerts
+# T3 default if -T unspecified
+# T4 often used during CTF's
+# T5 possible packet loss and can compromise accuracy of the scan results
+
+nmap -p- -T4 $1;
+
+# TODO: Add silent option

@@ -1,0 +1,4 @@
+#!/bin/bash
+# $1 - file with hashes, 1 hash per file line
+
+john -w=/usr/share/wordlists/rockyou.txt $1

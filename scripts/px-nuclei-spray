@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo nuclei -u $1

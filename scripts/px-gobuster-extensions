@@ -1,0 +1,5 @@
+#!/bin/bash
+# $1 = url
+# $2 = file extensions (comma-separated)
+
+px-gobuster-pages -u $1 -x $2

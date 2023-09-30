@@ -1,0 +1,4 @@
+#!/bin/bash
+# $1 = url
+
+gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u $1 -k

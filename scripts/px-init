@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Customize the system a little
+sudo apt update
+
+# sudo apt install -y \
+#   fzf
+
+# fzf on ParrotOS is stale, so we need to install it from source
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+echo "y" | ~/.fzf/install
