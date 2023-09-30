@@ -15,5 +15,13 @@ if ! grep -q "planq" ~/.bashrc; then
   echo "source ~/my_data/planq/.bashrc" >> ~/.bashrc
 fi
 
+for file in ~/my_data/planq/scripts/*;
+do
+  if [[ -f $file ]]; then
+    chmod +x $file
+    source $file
+  fi
+done
+
 # Set up gnome-keyring-daemon so we don't get prompted to set a password during apt installations
 echo -n "htb-tkit" | gnome-keyring-daemon --unlock
