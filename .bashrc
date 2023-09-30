@@ -1,4 +1,4 @@
-source .bash/bash_fzf
+source ~/my_data/planq/.bash/bash_fzf
 
 # Unlimited bash history
 export HISTFILESIZE=
@@ -23,6 +23,8 @@ export PATH=$PATH:~/go/bin # Append /go/bin to PATH
 alias px-pyserve='python3 -m http.server 8081' # 8081 because burp is on 8080
 alias px-revshell='nc -nlvp 1337'
 alias px-hosts='sudo vim /etc/hosts'
+
+alias fzf='~/.fzf/bin/fzf'
 
 # Auto-download and prepare a bunch of tools in the tools folder
 px-download-bin-tools > /dev/null 2>&1 &

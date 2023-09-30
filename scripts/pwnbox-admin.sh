@@ -1,10 +1,21 @@
 function px-init_f {
   sudo apt update
 
-  sudo apt install -y \
-    fzf
+  # sudo apt install -y \
+  #   fzf
+
+  px-install-fzf_f
 }
-alias px-init=px-init_f # Customize the system a little
+# Customize the system a little
+alias px-init=px-init_f
+
+
+
+function px-install-fzf_f {
+  # fzf on ParrotOS is stale, so we need to install it from source
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  echo "y" | ~/.fzf/install
+}
 
 
 
@@ -31,7 +42,8 @@ function px-install-tools_f {
   # go install -v github.com/projectdiscovery/katana/cmd/katana@latest
   # go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 }
-alias px-install-tools=px-install-tools_f # Install a bunch of tools missing from the base image
+# Install a bunch of tools missing from the base image
+alias px-install-tools=px-install-tools_f
 
 
 
@@ -55,5 +67,5 @@ function px-download-bin-tools_f {
   cp ~/my_data/planq/tools/* .
   cd ..
 }
-# Download tools to be served over HTTP
-alias px-download-bin-tools=px-download-bin-tools_f # Download all the bin tools to be served over pyserve
+# Download all the bin tools to be served over pyserve
+alias px-download-bin-tools=px-download-bin-tools_f
