@@ -22,6 +22,10 @@ find / -user <user> 2> /dev/null
 # Try to find some passwords
 cat /etc/passwd
 
+# Find actual users in /etc/passwd
+# This will look for passwd entries with /bin/bash
+cat /etc/passwd | grep sh$
+
 # Try to find some hosts
 cat /etc/hosts
 

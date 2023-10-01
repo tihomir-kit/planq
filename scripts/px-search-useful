@@ -1,0 +1,7 @@
+#!/bin/bash
+# Search through /opt/useful
+# - PayloadsAllTheThings
+# - SecLists
+
+# -i for ignore case
+find /opt/useful | grep -i $1

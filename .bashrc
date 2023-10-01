@@ -13,6 +13,7 @@ export PATH=$PATH:~/my_data/planq/scripts:~/my_data/planq/memos:~/go/bin:~/.fzf/
 alias rebash='. ~/.bashrc'
 alias reinit='~/my_data/user_init; rebash'
 alias pyserve='px-pyserve'
+alias pysmtp='px-pysmtp'
 alias revshell='px-revshell'
 alias hostes='px-hosts'
 alias hostrgt='px-hosts-add'
