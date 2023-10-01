@@ -16,7 +16,7 @@ alias pyserve='px-pyserve'
 alias pysmtp='px-pysmtp'
 alias revshell='px-revshell'
 alias hostes='px-hosts'
-alias hostrgt='px-hosts-add'
+alias hostrgt='px-hosts-set-target'
 
 # Auto-download and prepare a bunch of tools in the tools folder
 px-download-bin-tools > /dev/null 2>&1 &

@@ -2,4 +2,4 @@
 # $1 = url
 # $2 = file extensions (comma-separated)
 
-./px-gobuster-pages $1 -x $2
+px-gobuster-pages $1 -x $2
