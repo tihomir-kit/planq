@@ -21,3 +21,5 @@ alias hostrgt='px-hosts-set-target'
 # Auto-download and prepare a bunch of tools in the tools folder
 px-download-bin-tools > /dev/null 2>&1 &
 disown # Tell the shell to forget about the previous job, don't send notifications to terminal
+
+hostrgt 10.129.98.243 snoopy mail.snoopy.htb mm.snoopy.htb

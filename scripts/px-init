@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Customize the system a little
-sudo apt update
+# # Customize the system a little
+# sudo apt update
 
+# # /usr/share/payloadsallthethings
+# # /usr/share/seclists
 # sudo apt install -y \
-#   fzf
-
-# fzf on ParrotOS is stale, so we need to install it from source
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-echo "y" | ~/.fzf/install
+#   payloadsallthethings \
+#   seclists

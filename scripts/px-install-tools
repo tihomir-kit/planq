@@ -3,7 +3,11 @@
 
 sudo apt update
 
+# /usr/share/payloadsallthethings
+# /usr/share/seclists
 sudo apt install -y \
+  payloadsallthethings \
+  seclists \
   xrdp \
   sqlitebrowser \
   mongodb-database-tools \

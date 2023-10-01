@@ -15,12 +15,25 @@ if ! grep -q "planq" ~/.bashrc; then
   echo "source ~/my_data/planq/.bashrc" >> ~/.bashrc
 fi
 
+# Make planq scripts executable
 for file in ~/my_data/planq/scripts/*;
 do
   if [[ -f $file ]]; then
     chmod +x $file
   fi
 done
+
+# Make planq memos executable
+for file in ~/my_data/planq/memos/*;
+do
+  if [[ -f $file ]]; then
+    chmod +x $file
+  fi
+done
+
+# fzf on ParrotOS is stale, so we need to install it from source
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+echo "y" | ~/.fzf/install
 
 # Set up gnome-keyring-daemon so we don't get prompted to set a password during apt installations
 echo -n "htb-tkit" | gnome-keyring-daemon --unlock
