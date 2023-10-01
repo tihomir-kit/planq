@@ -1,0 +1,4 @@
+#!/bin/bash
+# Add a host to /etc/hosts
+
+sudo sed -i "/$1/d" /etc/hosts;

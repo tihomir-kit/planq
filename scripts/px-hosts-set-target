@@ -1,9 +1,21 @@
 #!/bin/bash
 # Add "trgt" host IP to /etc/hosts
 
-px-hosts-add $1 trgt
+./px-hosts-remove trgt
 
-if [ -n "$2" ]; then
-  px-hosts-add $1 $2
-  px-hosts-add $1 $2.htb
+# trgt always needs to be in /etc/hosts
+hosts = "trgt"
+
+# If a main hostname is provided, add it to the list both naked and .htb
+if [ $# -ge 2 ]; then
+  hosts="$hosts $2 $2.htb"
 fi
+
+# If additional hostnames are provided, add them to the list
+if [ $# -ge 3 ]; then
+  for arg in "${@:3}"; do
+      hosts="$hosts $arg"
+  done
+fi
+
+echo "$1 $hosts" | sudo tee -a /etc/hosts;
