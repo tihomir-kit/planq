@@ -53,4 +53,4 @@ xdg-mime default codium.desktop application/x-ruby
 xdg-mime default codium.desktop application/x-perl
 xdg-mime default codium.desktop application/x-php
 
-sudo apt update
+sudo apt update &
