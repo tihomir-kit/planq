@@ -4,4 +4,4 @@
 # - SecLists
 
 # -i for ignore case
-find /opt/useful | grep -i $1
+find /opt/useful | grep --color=auto -i $1

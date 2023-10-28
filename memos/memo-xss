@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "
+# First try this
+<b>this should be bold</b>
+
+# Then run pyserve and try this. It's important that someone is hitting that url.
+# If nobody is, that's probably not what we're looking for.
+<img src="http://10.10.14.208:8081/xss" />
+
+https://www.cobalt.io/blog/a-pentesters-guide-to-server-side-template-injection-ssti
+"

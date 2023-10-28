@@ -1,3 +1,4 @@
 #!/bin/bash
 
+# TODO: $1 param or 8081
 nc -nlvp 1337

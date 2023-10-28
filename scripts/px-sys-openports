@@ -2,4 +2,4 @@
 # Examine open ports (and currently in use)
 
 # $1 - <port/service_name>
-netstat -tuln | grep $1
+netstat -tuln | grep --color=auto $1
