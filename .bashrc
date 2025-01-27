@@ -21,6 +21,8 @@ alias hostrgt='px-hosts-set-target'
 # Auto-download and prepare a bunch of tools in the tools folder
 px-download-bin-tools > /dev/null 2>&1 &
 disown # Tell the shell to forget about the previous job, don't send notifications to terminal
+px-install-gef > /dev/null 2>&1 &
+disown
 
 # Make the autocomplete case-insensitive (auto corrects the casing)
 bind 'set completion-ignore-case on'
