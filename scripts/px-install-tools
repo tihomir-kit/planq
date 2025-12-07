@@ -1,22 +1,32 @@
 #!/bin/bash
 # Install a bunch of tools missing from the base image
+# This script is idempotent - safe to run multiple times
 
 sudo apt update
 
+# --- System/VirtualBox packages ---
+sudo apt install -y \
+  virtualbox-guest-utils \
+  virtualbox-guest-x11
+
+# --- Security tools ---
 # /usr/share/payloadsallthethings
 # /usr/share/seclists
 sudo apt install -y \
   payloadsallthethings \
   seclists \
+  pwncat
+
+# --- Misc tools ---
+sudo apt install -y \
   xrdp \
   sqlitebrowser \
-  mongodb-database-tools \
-  pwncat
+  mongodb-database-tools
 
 # Install Python tools
 pip3 install git-dumper
 
-# Install GO tools (line-by-line required becuase of some GO Install restrictions)
+# Install GO tools (line-by-line required because of some GO Install restrictions)
 go install -v github.com/hakluke/hakrawler@latest
 go install -v github.com/fullstorydev/grpcui/cmd/grpcui@latest
 go install -v github.com/jpillora/chisel@latest
@@ -26,3 +36,7 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 # go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 # go install -v github.com/projectdiscovery/katana/cmd/katana@latest
 # go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+
+# --- GDB Enhanced Features (GEF) ---
+# https://github.com/hugsy/gef
+bash -c "$(curl -fsSL https://gef.blah.cat/sh)"

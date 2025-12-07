@@ -18,5 +18,20 @@
     "titleBar.inactiveBackground": "#3f591c99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#3f591c"
+  "peacock.color": "#3f591c",
+  "cSpell.words": [
+    "fullstorydev",
+    "grpcui",
+    "hakrawler",
+    "httpx",
+    "jpillora",
+    "katana",
+    "naabu",
+    "payloadsallthethings",
+    "projectdiscovery",
+    "pwncat",
+    "seclists",
+    "subfinder",
+    "xrdp"
+  ]
 }
