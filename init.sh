@@ -5,16 +5,18 @@
 set -e
 
 PLANQ_DIR="$HOME/planq"
+REPO_BRANCH="parrotsec"
 
 # --- Clone/update planq repo ---
 mkdir -p "$HOME"
 if [[ -d "$PLANQ_DIR" ]]; then
   echo "Updating planq repo..."
   cd "$PLANQ_DIR"
+  git checkout "$REPO_BRANCH"
   git pull
 else
   echo "Cloning planq repo..."
-  git clone https://github.com/tihomir-kit/planq "$PLANQ_DIR"
+  git clone -b "$REPO_BRANCH" https://github.com/tihomir-kit/planq "$PLANQ_DIR"
 fi
 
 # --- Append planq .bashrc to ~/.bashrc if not already there ---
